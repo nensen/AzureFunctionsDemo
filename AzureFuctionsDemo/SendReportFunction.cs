@@ -14,7 +14,7 @@ namespace AzureFuctionsDemo
         public static void Run([TimerTrigger("0 */2 * * * *")]TimerInfo myTimer, ILogger log)
         {
             // Format: {second} {minute} {hour} {day} {month} {day-of-week}.
-            // 0 */2 * * * * => run every 30 sec
+            // 0 */2 * * * * => run every 2 min
             // 0 30 8 * * 1-5 => run from Monday to Friday at 08:30 AM
 
             SendReportEmail(log).Wait();
